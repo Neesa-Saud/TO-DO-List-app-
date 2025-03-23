@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import '../functions/auth_function.dart';
 
 class LOgInPage extends StatefulWidget {
   const LOgInPage({super.key});
@@ -18,7 +19,7 @@ class _LOgInPageState extends State<LOgInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Email/Pass Auth'),
+        title: Text('To Do List'),
         actions: [
           IconButton(
             onPressed: () async {
@@ -27,7 +28,7 @@ class _LOgInPageState extends State<LOgInPage> {
             icon: Icon(Icons.leave_bags_at_home),
           ),
         ],
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 9, 74, 105),
       ),
       body: Form(
         key: _formkey,
