@@ -15,8 +15,20 @@ class _TOdoListState extends State<TOdoList> {
         preferredSize: Size.fromHeight(100), // Increased height of AppBar
         child: AppBar(
           backgroundColor: const Color.fromARGB(255, 9, 74, 105),
-          leading: Icon(Icons.arrow_back_ios, color: Colors.white),
-          actions: [Icon(Icons.add, color: Colors.white), SizedBox(width: 15)],
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.add),
+              color: Colors.white,
+              onPressed: () {},
+            ),
+            SizedBox(width: 15),
+          ],
           title: Padding(
             padding: EdgeInsets.only(top: 18), // Adds space above the title
             child: Column(
